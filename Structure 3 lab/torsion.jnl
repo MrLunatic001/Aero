@@ -2214,3 +2214,25 @@ mdb.jobs['Job-2']._Message(COMPLETED, {'message': 'Analysis phase complete',
 mdb.jobs['Job-2']._Message(JOB_COMPLETED, {'time': 'Thu Nov  7 17:05:56 2024', 
     'jobName': 'Job-2'})
 # Save by adrie on 2024_11_07-17.38.44; build 2024 2023_09_21-13.55.25 RELr426 190762
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Model-1', modelPrint=OFF, 
+    multiprocessingMode=DEFAULT, name='Job-3', nodalOutputPrecision=SINGLE, 
+    numCpus=1, numGPUs=0, numThreadsPerMpiProcess=1, queue=None, resultsFormat=
+    ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=0, 
+    waitMinutes=0)
+mdb.jobs['Job-3'].submit(consistencyChecking=OFF)
+# Save by adrie on 2024_11_12-19.57.07; build 2024 2023_09_21-13.55.25 RELr426 190762
