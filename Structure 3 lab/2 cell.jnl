@@ -583,3 +583,1788 @@ mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF,
     waitMinutes=0)
 mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
 # Save by adrie on 2024_11_12-20.53.31; build 2024 2023_09_21-13.55.25 RELr426 190762
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'jobName': 'Job-1', 'clientHost': 'LAPTOP-V6H9F780', 'handle': 0})
+mdb.jobs['Job-1']._Message(ODB_FILE, {'file': 'C:\\temp\\Job-1.odb', 
+    'phase': BATCHPRE_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'message': 'Analysis phase complete', 
+    'phase': BATCHPRE_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1', 'clientHost': 'LAPTOP-V6H9F780', 'handle': 1784})
+mdb.jobs['Job-1']._Message(STEP, {'stepId': 1, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'step': 0, 'frame': 0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {
+    'message': 'The 3-direction at one or more points in one or more layers in 6400 elements as defined in *ORIENTATION are in the opposite direction to the element normals. Either the 1 or 2 and the 3-direction defined in *ORIENTATION will be reversed. The elements have been identified in element set WarnElem3DirOppElemNormalStep1Inc1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {
+    'message': 'The local-3 direction (after additional rotation and permutation) of the material orientation , specified via *ORIENTATION, is in the plane of the SHELL, MEMBRANE, GASKET, COHESIVE, or SURFACE element. The local-1 direction will be projected onto the element surface and the positive element normal will be used as the local-3 direction. The elements have been identified in element set WarnElemUserNormMatOrient.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MEMORY_ESTIMATE, {'memory': 316.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(PHYSICAL_MEMORY, {'physical_memory': 16150.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MINIMUM_MEMORY, {'minimum_memory': 48.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'step': 0, 'frame': 1, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'step': 1, 'increment': 1, 'attempts': 1, 
+    'severe': 0, 'equilibrium': 1, 'iterations': 1, 'totalTime': 0.0, 
+    'stepTime': 2.22e-16, 'timeIncrement': 2.22e-16, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(END_STEP, {'stepId': 1, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'message': 'Analysis phase complete', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(JOB_COMPLETED, {'time': 'Wed Nov 13 09:25:42 2024', 
+    'jobName': 'Job-1'})
+mdb.models['Model-1'].materials['AL'].elastic.setValues(table=((73100.0, 
+    0.305), ))
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'jobName': 'Job-1', 'clientHost': 'LAPTOP-V6H9F780', 'handle': 0})
+mdb.jobs['Job-1']._Message(ODB_FILE, {'file': 'C:\\temp\\Job-1.odb', 
+    'phase': BATCHPRE_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'message': 'Analysis phase complete', 
+    'phase': BATCHPRE_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1', 'clientHost': 'LAPTOP-V6H9F780', 'handle': 20764})
+mdb.jobs['Job-1']._Message(STEP, {'stepId': 1, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'step': 0, 'frame': 0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {
+    'message': 'The 3-direction at one or more points in one or more layers in 6400 elements as defined in *ORIENTATION are in the opposite direction to the element normals. Either the 1 or 2 and the 3-direction defined in *ORIENTATION will be reversed. The elements have been identified in element set WarnElem3DirOppElemNormalStep1Inc1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {
+    'message': 'The local-3 direction (after additional rotation and permutation) of the material orientation , specified via *ORIENTATION, is in the plane of the SHELL, MEMBRANE, GASKET, COHESIVE, or SURFACE element. The local-1 direction will be projected onto the element surface and the positive element normal will be used as the local-3 direction. The elements have been identified in element set WarnElemUserNormMatOrient.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MEMORY_ESTIMATE, {'memory': 316.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(PHYSICAL_MEMORY, {'physical_memory': 16150.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MINIMUM_MEMORY, {'minimum_memory': 48.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'step': 0, 'frame': 1, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'step': 1, 'increment': 1, 'attempts': 1, 
+    'severe': 0, 'equilibrium': 1, 'iterations': 1, 'totalTime': 0.0, 
+    'stepTime': 2.22e-16, 'timeIncrement': 2.22e-16, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(END_STEP, {'stepId': 1, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'message': 'Analysis phase complete', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(JOB_COMPLETED, {'time': 'Wed Nov 13 09:29:09 2024', 
+    'jobName': 'Job-1'})
+mdb.jobs.changeKey(fromName='Job-1', toName='job_Torsion_10_mesh_size')
+mdb.models['Model-1'].rootAssembly.deleteMesh(regions=(
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'], ))
+mdb.models['Model-1'].rootAssembly.seedPartInstance(deviationFactor=0.1, 
+    minSizeFactor=0.1, regions=(
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'], ), size=7.0)
+mdb.models['Model-1'].rootAssembly.generateMesh(regions=(
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'], ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Model-1', modelPrint=OFF, 
+    multiprocessingMode=DEFAULT, name='job_torsion_7_mesh_size', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, numThreadsPerMpiProcess=
+    1, queue=None, resultsFormat=ODB, scratch='', type=ANALYSIS, 
+    userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['job_torsion_7_mesh_size'].submit(consistencyChecking=OFF)
+mdb.jobs['job_torsion_7_mesh_size']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'jobName': 'job_torsion_7_mesh_size', 'clientHost': 'LAPTOP-V6H9F780', 
+    'handle': 0})
+mdb.jobs['job_torsion_7_mesh_size']._Message(ODB_FILE, {
+    'file': 'C:\\temp\\job_torsion_7_mesh_size.odb', 'phase': BATCHPRE_PHASE, 
+    'jobName': 'job_torsion_7_mesh_size'})
+mdb.jobs['job_torsion_7_mesh_size']._Message(COMPLETED, {
+    'message': 'Analysis phase complete', 'phase': BATCHPRE_PHASE, 
+    'jobName': 'job_torsion_7_mesh_size'})
+mdb.jobs['job_torsion_7_mesh_size']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'jobName': 'job_torsion_7_mesh_size', 'clientHost': 'LAPTOP-V6H9F780', 
+    'handle': 13676})
+mdb.jobs['job_torsion_7_mesh_size']._Message(STEP, {'stepId': 1, 
+    'phase': STANDARD_PHASE, 'jobName': 'job_torsion_7_mesh_size'})
+mdb.jobs['job_torsion_7_mesh_size']._Message(ODB_FRAME, {'step': 0, 'frame': 0, 
+    'phase': STANDARD_PHASE, 'jobName': 'job_torsion_7_mesh_size'})
+mdb.jobs['job_torsion_7_mesh_size']._Message(WARNING, {
+    'message': 'The 3-direction at one or more points in one or more layers in 13442 elements as defined in *ORIENTATION are in the opposite direction to the element normals. Either the 1 or 2 and the 3-direction defined in *ORIENTATION will be reversed. The elements have been identified in element set WarnElem3DirOppElemNormalStep1Inc1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'job_torsion_7_mesh_size'})
+mdb.jobs['job_torsion_7_mesh_size']._Message(WARNING, {
+    'message': 'The local-3 direction (after additional rotation and permutation) of the material orientation , specified via *ORIENTATION, is in the plane of the SHELL, MEMBRANE, GASKET, COHESIVE, or SURFACE element. The local-1 direction will be projected onto the element surface and the positive element normal will be used as the local-3 direction. The elements have been identified in element set WarnElemUserNormMatOrient.', 
+    'phase': STANDARD_PHASE, 'jobName': 'job_torsion_7_mesh_size'})
+mdb.jobs['job_torsion_7_mesh_size']._Message(MEMORY_ESTIMATE, {'memory': 665.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'job_torsion_7_mesh_size'})
+mdb.jobs['job_torsion_7_mesh_size']._Message(PHYSICAL_MEMORY, {
+    'physical_memory': 16150.0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_torsion_7_mesh_size'})
+mdb.jobs['job_torsion_7_mesh_size']._Message(MINIMUM_MEMORY, {
+    'minimum_memory': 94.0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_torsion_7_mesh_size'})
+mdb.jobs['job_torsion_7_mesh_size']._Message(ODB_FRAME, {'step': 0, 'frame': 1, 
+    'phase': STANDARD_PHASE, 'jobName': 'job_torsion_7_mesh_size'})
+mdb.jobs['job_torsion_7_mesh_size']._Message(STATUS, {'step': 1, 
+    'increment': 1, 'attempts': 1, 'severe': 0, 'equilibrium': 1, 
+    'iterations': 1, 'totalTime': 0.0, 'stepTime': 2.22e-16, 
+    'timeIncrement': 2.22e-16, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_torsion_7_mesh_size'})
+mdb.jobs['job_torsion_7_mesh_size']._Message(END_STEP, {'stepId': 1, 
+    'phase': STANDARD_PHASE, 'jobName': 'job_torsion_7_mesh_size'})
+mdb.jobs['job_torsion_7_mesh_size']._Message(COMPLETED, {
+    'message': 'Analysis phase complete', 'phase': STANDARD_PHASE, 
+    'jobName': 'job_torsion_7_mesh_size'})
+mdb.jobs['job_torsion_7_mesh_size']._Message(JOB_COMPLETED, {
+    'time': 'Wed Nov 13 10:08:10 2024', 'jobName': 'job_torsion_7_mesh_size'})
+mdb.models['Model-1'].rootAssembly.deleteMesh(regions=(
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'], ))
+mdb.models['Model-1'].rootAssembly.seedPartInstance(deviationFactor=0.1, 
+    minSizeFactor=0.1, regions=(
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'], ), size=1.0)
+mdb.models['Model-1'].rootAssembly.generateMesh(regions=(
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'], ))
+mdb.models['Model-1'].rootAssembly.deleteMesh(regions=(
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'], ))
+mdb.models['Model-1'].rootAssembly.seedPartInstance(deviationFactor=0.1, 
+    minSizeFactor=0.1, regions=(
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'], ), size=4.0)
+mdb.models['Model-1'].rootAssembly.generateMesh(regions=(
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'], ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Model-1', modelPrint=OFF, 
+    multiprocessingMode=DEFAULT, name='job_torsion_4_mesh_size', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, numThreadsPerMpiProcess=
+    1, queue=None, resultsFormat=ODB, scratch='', type=ANALYSIS, 
+    userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['job_torsion_4_mesh_size'].submit(consistencyChecking=OFF)
+mdb.jobs['job_torsion_4_mesh_size']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'jobName': 'job_torsion_4_mesh_size', 'clientHost': 'LAPTOP-V6H9F780', 
+    'handle': 0})
+mdb.jobs['job_torsion_4_mesh_size']._Message(ODB_FILE, {
+    'file': 'C:\\temp\\job_torsion_4_mesh_size.odb', 'phase': BATCHPRE_PHASE, 
+    'jobName': 'job_torsion_4_mesh_size'})
+mdb.jobs['job_torsion_4_mesh_size']._Message(COMPLETED, {
+    'message': 'Analysis phase complete', 'phase': BATCHPRE_PHASE, 
+    'jobName': 'job_torsion_4_mesh_size'})
+mdb.jobs['job_torsion_4_mesh_size']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'jobName': 'job_torsion_4_mesh_size', 'clientHost': 'LAPTOP-V6H9F780', 
+    'handle': 26700})
+mdb.jobs['job_torsion_4_mesh_size']._Message(STEP, {'stepId': 1, 
+    'phase': STANDARD_PHASE, 'jobName': 'job_torsion_4_mesh_size'})
+mdb.jobs['job_torsion_4_mesh_size']._Message(ODB_FRAME, {'step': 0, 'frame': 0, 
+    'phase': STANDARD_PHASE, 'jobName': 'job_torsion_4_mesh_size'})
+mdb.jobs['job_torsion_4_mesh_size']._Message(WARNING, {
+    'message': 'The 3-direction at one or more points in one or more layers in 40000 elements as defined in *ORIENTATION are in the opposite direction to the element normals. Either the 1 or 2 and the 3-direction defined in *ORIENTATION will be reversed. The elements have been identified in element set WarnElem3DirOppElemNormalStep1Inc1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'job_torsion_4_mesh_size'})
+mdb.jobs['job_torsion_4_mesh_size']._Message(WARNING, {
+    'message': 'The local-3 direction (after additional rotation and permutation) of the material orientation , specified via *ORIENTATION, is in the plane of the SHELL, MEMBRANE, GASKET, COHESIVE, or SURFACE element. The local-1 direction will be projected onto the element surface and the positive element normal will be used as the local-3 direction. The elements have been identified in element set WarnElemUserNormMatOrient.', 
+    'phase': STANDARD_PHASE, 'jobName': 'job_torsion_4_mesh_size'})
+mdb.jobs['job_torsion_4_mesh_size']._Message(MEMORY_ESTIMATE, {
+    'memory': 2197.0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_torsion_4_mesh_size'})
+mdb.jobs['job_torsion_4_mesh_size']._Message(PHYSICAL_MEMORY, {
+    'physical_memory': 16150.0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_torsion_4_mesh_size'})
+mdb.jobs['job_torsion_4_mesh_size']._Message(MINIMUM_MEMORY, {
+    'minimum_memory': 274.0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_torsion_4_mesh_size'})
+mdb.jobs['job_torsion_4_mesh_size']._Message(ODB_FRAME, {'step': 0, 'frame': 1, 
+    'phase': STANDARD_PHASE, 'jobName': 'job_torsion_4_mesh_size'})
+mdb.jobs['job_torsion_4_mesh_size']._Message(STATUS, {'step': 1, 
+    'increment': 1, 'attempts': 1, 'severe': 0, 'equilibrium': 1, 
+    'iterations': 1, 'totalTime': 0.0, 'stepTime': 2.22e-16, 
+    'timeIncrement': 2.22e-16, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_torsion_4_mesh_size'})
+mdb.jobs['job_torsion_4_mesh_size']._Message(END_STEP, {'stepId': 1, 
+    'phase': STANDARD_PHASE, 'jobName': 'job_torsion_4_mesh_size'})
+mdb.jobs['job_torsion_4_mesh_size']._Message(COMPLETED, {
+    'message': 'Analysis phase complete', 'phase': STANDARD_PHASE, 
+    'jobName': 'job_torsion_4_mesh_size'})
+mdb.jobs['job_torsion_4_mesh_size']._Message(JOB_COMPLETED, {
+    'time': 'Wed Nov 13 10:23:43 2024', 'jobName': 'job_torsion_4_mesh_size'})
+# Save by User on 2024_11_13-10.35.30; build 2024 2023_09_21-13.55.25 RELr426 190762
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.Model(name='bending', objectToCopy=mdb.models['Model-1'])
+mdb.models.changeKey(fromName='Model-1', toName='torsion')
+del mdb.models['bending'].loads['Load-1']
+mdb.models['bending'].ConcentratedForce(cf2=50.0, createStepName='Step-1', 
+    distributionType=UNIFORM, field='', localCsys=None, name='Load-1', region=
+    mdb.models['bending'].rootAssembly.sets['rp'])
+mdb.models['bending'].rootAssembly.deleteMesh(regions=(
+    mdb.models['bending'].rootAssembly.instances['Part-1-1'], ))
+mdb.models['bending'].rootAssembly.seedPartInstance(deviationFactor=0.1, 
+    minSizeFactor=0.1, regions=(
+    mdb.models['bending'].rootAssembly.instances['Part-1-1'], ), size=10.0)
+mdb.models['bending'].rootAssembly.generateMesh(regions=(
+    mdb.models['bending'].rootAssembly.instances['Part-1-1'], ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='bending', modelPrint=OFF, 
+    multiprocessingMode=DEFAULT, name='job_bending_shear_10_mesh_size', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, numThreadsPerMpiProcess=
+    1, queue=None, resultsFormat=ODB, scratch='', type=ANALYSIS, 
+    userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['job_bending_shear_10_mesh_size'].submit(consistencyChecking=OFF)
+mdb.jobs['job_bending_shear_10_mesh_size']._Message(STARTED, {
+    'phase': BATCHPRE_PHASE, 'jobName': 'job_bending_shear_10_mesh_size', 
+    'clientHost': 'LAPTOP-V6H9F780', 'handle': 0})
+mdb.jobs['job_bending_shear_10_mesh_size']._Message(ODB_FILE, {
+    'file': 'C:\\temp\\job_bending_shear_10_mesh_size.odb', 
+    'phase': BATCHPRE_PHASE, 'jobName': 'job_bending_shear_10_mesh_size'})
+mdb.jobs['job_bending_shear_10_mesh_size']._Message(COMPLETED, {
+    'message': 'Analysis phase complete', 'phase': BATCHPRE_PHASE, 
+    'jobName': 'job_bending_shear_10_mesh_size'})
+mdb.jobs['job_bending_shear_10_mesh_size']._Message(STARTED, {
+    'phase': STANDARD_PHASE, 'jobName': 'job_bending_shear_10_mesh_size', 
+    'clientHost': 'LAPTOP-V6H9F780', 'handle': 11084})
+mdb.jobs['job_bending_shear_10_mesh_size']._Message(STEP, {'stepId': 1, 
+    'phase': STANDARD_PHASE, 'jobName': 'job_bending_shear_10_mesh_size'})
+mdb.jobs['job_bending_shear_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_shear_10_mesh_size'})
+mdb.jobs['job_bending_shear_10_mesh_size']._Message(WARNING, {
+    'message': 'The 3-direction at one or more points in one or more layers in 6400 elements as defined in *ORIENTATION are in the opposite direction to the element normals. Either the 1 or 2 and the 3-direction defined in *ORIENTATION will be reversed. The elements have been identified in element set WarnElem3DirOppElemNormalStep1Inc1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'job_bending_shear_10_mesh_size'})
+mdb.jobs['job_bending_shear_10_mesh_size']._Message(WARNING, {
+    'message': 'The local-3 direction (after additional rotation and permutation) of the material orientation , specified via *ORIENTATION, is in the plane of the SHELL, MEMBRANE, GASKET, COHESIVE, or SURFACE element. The local-1 direction will be projected onto the element surface and the positive element normal will be used as the local-3 direction. The elements have been identified in element set WarnElemUserNormMatOrient.', 
+    'phase': STANDARD_PHASE, 'jobName': 'job_bending_shear_10_mesh_size'})
+mdb.jobs['job_bending_shear_10_mesh_size']._Message(MEMORY_ESTIMATE, {
+    'memory': 316.0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_shear_10_mesh_size'})
+mdb.jobs['job_bending_shear_10_mesh_size']._Message(PHYSICAL_MEMORY, {
+    'physical_memory': 16150.0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_shear_10_mesh_size'})
+mdb.jobs['job_bending_shear_10_mesh_size']._Message(MINIMUM_MEMORY, {
+    'minimum_memory': 48.0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_shear_10_mesh_size'})
+mdb.jobs['job_bending_shear_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 1, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_shear_10_mesh_size'})
+mdb.jobs['job_bending_shear_10_mesh_size']._Message(STATUS, {'step': 1, 
+    'increment': 1, 'attempts': 1, 'severe': 0, 'equilibrium': 1, 
+    'iterations': 1, 'totalTime': 0.0, 'stepTime': 2.22e-16, 
+    'timeIncrement': 2.22e-16, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_shear_10_mesh_size'})
+mdb.jobs['job_bending_shear_10_mesh_size']._Message(END_STEP, {'stepId': 1, 
+    'phase': STANDARD_PHASE, 'jobName': 'job_bending_shear_10_mesh_size'})
+mdb.jobs['job_bending_shear_10_mesh_size']._Message(COMPLETED, {
+    'message': 'Analysis phase complete', 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_shear_10_mesh_size'})
+mdb.jobs['job_bending_shear_10_mesh_size']._Message(JOB_COMPLETED, {
+    'time': 'Wed Nov 13 10:54:06 2024', 
+    'jobName': 'job_bending_shear_10_mesh_size'})
+mdb.models['bending'].fieldOutputRequests['F-Output-1'].setValues(variables=(
+    'S', 'LE', 'U', 'UT', 'UR', 'RBANG', 'RBROT', 'RF', 'CF'))
+mdb.models['bending'].rootAssembly.deleteMesh(regions=(
+    mdb.models['bending'].rootAssembly.instances['Part-1-1'], ))
+mdb.models['bending'].rootAssembly.seedPartInstance(deviationFactor=0.1, 
+    minSizeFactor=0.1, regions=(
+    mdb.models['bending'].rootAssembly.instances['Part-1-1'], ), size=5.0)
+mdb.models['bending'].rootAssembly.generateMesh(regions=(
+    mdb.models['bending'].rootAssembly.instances['Part-1-1'], ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='bending', modelPrint=OFF, 
+    multiprocessingMode=DEFAULT, name='job_bending_shear_5_mesh_size', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, numThreadsPerMpiProcess=
+    1, queue=None, resultsFormat=ODB, scratch='', type=ANALYSIS, 
+    userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['job_bending_shear_5_mesh_size'].submit(consistencyChecking=OFF)
+mdb.jobs['job_bending_shear_5_mesh_size']._Message(STARTED, {
+    'phase': BATCHPRE_PHASE, 'jobName': 'job_bending_shear_5_mesh_size', 
+    'clientHost': 'LAPTOP-V6H9F780', 'handle': 0})
+mdb.jobs['job_bending_shear_5_mesh_size']._Message(WARNING, {
+    'message': 'STRAIN OUTPUT REQUEST LE IS NOT VALID FOR SOME ELEMENTS IN THIS ANALYSIS. THIS REQUEST IS SWITCHED TO THE STRAIN MEASURE, E.', 
+    'phase': BATCHPRE_PHASE, 'jobName': 'job_bending_shear_5_mesh_size'})
+mdb.jobs['job_bending_shear_5_mesh_size']._Message(ODB_FILE, {
+    'file': 'C:\\temp\\job_bending_shear_5_mesh_size.odb', 
+    'phase': BATCHPRE_PHASE, 'jobName': 'job_bending_shear_5_mesh_size'})
+mdb.jobs['job_bending_shear_5_mesh_size']._Message(COMPLETED, {
+    'message': 'Analysis phase complete', 'phase': BATCHPRE_PHASE, 
+    'jobName': 'job_bending_shear_5_mesh_size'})
+mdb.jobs['job_bending_shear_5_mesh_size']._Message(STARTED, {
+    'phase': STANDARD_PHASE, 'jobName': 'job_bending_shear_5_mesh_size', 
+    'clientHost': 'LAPTOP-V6H9F780', 'handle': 15192})
+mdb.jobs['job_bending_shear_5_mesh_size']._Message(STEP, {'stepId': 1, 
+    'phase': STANDARD_PHASE, 'jobName': 'job_bending_shear_5_mesh_size'})
+mdb.jobs['job_bending_shear_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_shear_5_mesh_size'})
+mdb.jobs['job_bending_shear_5_mesh_size']._Message(WARNING, {
+    'message': 'The 3-direction at one or more points in one or more layers in 25600 elements as defined in *ORIENTATION are in the opposite direction to the element normals. Either the 1 or 2 and the 3-direction defined in *ORIENTATION will be reversed. The elements have been identified in element set WarnElem3DirOppElemNormalStep1Inc1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'job_bending_shear_5_mesh_size'})
+mdb.jobs['job_bending_shear_5_mesh_size']._Message(WARNING, {
+    'message': 'The local-3 direction (after additional rotation and permutation) of the material orientation , specified via *ORIENTATION, is in the plane of the SHELL, MEMBRANE, GASKET, COHESIVE, or SURFACE element. The local-1 direction will be projected onto the element surface and the positive element normal will be used as the local-3 direction. The elements have been identified in element set WarnElemUserNormMatOrient.', 
+    'phase': STANDARD_PHASE, 'jobName': 'job_bending_shear_5_mesh_size'})
+mdb.jobs['job_bending_shear_5_mesh_size']._Message(MEMORY_ESTIMATE, {
+    'memory': 1335.0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_shear_5_mesh_size'})
+mdb.jobs['job_bending_shear_5_mesh_size']._Message(PHYSICAL_MEMORY, {
+    'physical_memory': 16150.0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_shear_5_mesh_size'})
+mdb.jobs['job_bending_shear_5_mesh_size']._Message(MINIMUM_MEMORY, {
+    'minimum_memory': 177.0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_shear_5_mesh_size'})
+mdb.jobs['job_bending_shear_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 1, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_shear_5_mesh_size'})
+mdb.jobs['job_bending_shear_5_mesh_size']._Message(STATUS, {'step': 1, 
+    'increment': 1, 'attempts': 1, 'severe': 0, 'equilibrium': 1, 
+    'iterations': 1, 'totalTime': 0.0, 'stepTime': 2.22e-16, 
+    'timeIncrement': 2.22e-16, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_shear_5_mesh_size'})
+mdb.jobs['job_bending_shear_5_mesh_size']._Message(END_STEP, {'stepId': 1, 
+    'phase': STANDARD_PHASE, 'jobName': 'job_bending_shear_5_mesh_size'})
+mdb.jobs['job_bending_shear_5_mesh_size']._Message(COMPLETED, {
+    'message': 'Analysis phase complete', 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_shear_5_mesh_size'})
+mdb.jobs['job_bending_shear_5_mesh_size']._Message(JOB_COMPLETED, {
+    'time': 'Wed Nov 13 11:15:23 2024', 
+    'jobName': 'job_bending_shear_5_mesh_size'})
+mdb.models['bending'].rootAssembly.features['RP-1'].setValues(xValue=100.0)
+mdb.models['bending'].rootAssembly.regenerate()
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='bending', modelPrint=OFF, 
+    multiprocessingMode=DEFAULT, name='job_bending_LE_5_mesh_size', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, numThreadsPerMpiProcess=
+    1, queue=None, resultsFormat=ODB, scratch='', type=ANALYSIS, 
+    userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['job_bending_LE_5_mesh_size'].submit(consistencyChecking=OFF)
+mdb.jobs['job_bending_LE_5_mesh_size']._Message(STARTED, {
+    'phase': BATCHPRE_PHASE, 'jobName': 'job_bending_LE_5_mesh_size', 
+    'clientHost': 'LAPTOP-V6H9F780', 'handle': 0})
+mdb.jobs['job_bending_LE_5_mesh_size']._Message(WARNING, {
+    'message': 'STRAIN OUTPUT REQUEST LE IS NOT VALID FOR SOME ELEMENTS IN THIS ANALYSIS. THIS REQUEST IS SWITCHED TO THE STRAIN MEASURE, E.', 
+    'phase': BATCHPRE_PHASE, 'jobName': 'job_bending_LE_5_mesh_size'})
+mdb.jobs['job_bending_LE_5_mesh_size']._Message(ODB_FILE, {
+    'file': 'C:\\temp\\job_bending_LE_5_mesh_size.odb', 
+    'phase': BATCHPRE_PHASE, 'jobName': 'job_bending_LE_5_mesh_size'})
+mdb.jobs['job_bending_LE_5_mesh_size']._Message(COMPLETED, {
+    'message': 'Analysis phase complete', 'phase': BATCHPRE_PHASE, 
+    'jobName': 'job_bending_LE_5_mesh_size'})
+mdb.jobs['job_bending_LE_5_mesh_size']._Message(STARTED, {
+    'phase': STANDARD_PHASE, 'jobName': 'job_bending_LE_5_mesh_size', 
+    'clientHost': 'LAPTOP-V6H9F780', 'handle': 23100})
+mdb.jobs['job_bending_LE_5_mesh_size']._Message(STEP, {'stepId': 1, 
+    'phase': STANDARD_PHASE, 'jobName': 'job_bending_LE_5_mesh_size'})
+mdb.jobs['job_bending_LE_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_LE_5_mesh_size'})
+mdb.jobs['job_bending_LE_5_mesh_size']._Message(WARNING, {
+    'message': 'The 3-direction at one or more points in one or more layers in 25600 elements as defined in *ORIENTATION are in the opposite direction to the element normals. Either the 1 or 2 and the 3-direction defined in *ORIENTATION will be reversed. The elements have been identified in element set WarnElem3DirOppElemNormalStep1Inc1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'job_bending_LE_5_mesh_size'})
+mdb.jobs['job_bending_LE_5_mesh_size']._Message(WARNING, {
+    'message': 'The local-3 direction (after additional rotation and permutation) of the material orientation , specified via *ORIENTATION, is in the plane of the SHELL, MEMBRANE, GASKET, COHESIVE, or SURFACE element. The local-1 direction will be projected onto the element surface and the positive element normal will be used as the local-3 direction. The elements have been identified in element set WarnElemUserNormMatOrient.', 
+    'phase': STANDARD_PHASE, 'jobName': 'job_bending_LE_5_mesh_size'})
+mdb.jobs['job_bending_LE_5_mesh_size']._Message(MEMORY_ESTIMATE, {
+    'memory': 1335.0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_LE_5_mesh_size'})
+mdb.jobs['job_bending_LE_5_mesh_size']._Message(PHYSICAL_MEMORY, {
+    'physical_memory': 16150.0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_LE_5_mesh_size'})
+mdb.jobs['job_bending_LE_5_mesh_size']._Message(MINIMUM_MEMORY, {
+    'minimum_memory': 177.0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_LE_5_mesh_size'})
+mdb.jobs['job_bending_LE_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 1, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_LE_5_mesh_size'})
+mdb.jobs['job_bending_LE_5_mesh_size']._Message(STATUS, {'step': 1, 
+    'increment': 1, 'attempts': 1, 'severe': 0, 'equilibrium': 1, 
+    'iterations': 1, 'totalTime': 0.0, 'stepTime': 2.22e-16, 
+    'timeIncrement': 2.22e-16, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_LE_5_mesh_size'})
+mdb.jobs['job_bending_LE_5_mesh_size']._Message(END_STEP, {'stepId': 1, 
+    'phase': STANDARD_PHASE, 'jobName': 'job_bending_LE_5_mesh_size'})
+mdb.jobs['job_bending_LE_5_mesh_size']._Message(COMPLETED, {
+    'message': 'Analysis phase complete', 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_LE_5_mesh_size'})
+mdb.jobs['job_bending_LE_5_mesh_size']._Message(JOB_COMPLETED, {
+    'time': 'Wed Nov 13 11:25:16 2024', 
+    'jobName': 'job_bending_LE_5_mesh_size'})
+mdb.models['bending'].rootAssembly.deleteMesh(regions=(
+    mdb.models['bending'].rootAssembly.instances['Part-1-1'], ))
+mdb.models['bending'].rootAssembly.seedPartInstance(deviationFactor=0.1, 
+    minSizeFactor=0.1, regions=(
+    mdb.models['bending'].rootAssembly.instances['Part-1-1'], ), size=10.0)
+mdb.models['bending'].rootAssembly.generateMesh(regions=(
+    mdb.models['bending'].rootAssembly.instances['Part-1-1'], ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='bending', modelPrint=OFF, 
+    multiprocessingMode=DEFAULT, name='job_bending_LE_10_mesh_size', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, numThreadsPerMpiProcess=
+    1, queue=None, resultsFormat=ODB, scratch='', type=ANALYSIS, 
+    userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['job_bending_LE_10_mesh_size'].submit(consistencyChecking=OFF)
+mdb.jobs['job_bending_LE_10_mesh_size']._Message(STARTED, {
+    'phase': BATCHPRE_PHASE, 'jobName': 'job_bending_LE_10_mesh_size', 
+    'clientHost': 'LAPTOP-V6H9F780', 'handle': 0})
+mdb.jobs['job_bending_LE_10_mesh_size']._Message(WARNING, {
+    'message': 'STRAIN OUTPUT REQUEST LE IS NOT VALID FOR SOME ELEMENTS IN THIS ANALYSIS. THIS REQUEST IS SWITCHED TO THE STRAIN MEASURE, E.', 
+    'phase': BATCHPRE_PHASE, 'jobName': 'job_bending_LE_10_mesh_size'})
+mdb.jobs['job_bending_LE_10_mesh_size']._Message(ODB_FILE, {
+    'file': 'C:\\temp\\job_bending_LE_10_mesh_size.odb', 
+    'phase': BATCHPRE_PHASE, 'jobName': 'job_bending_LE_10_mesh_size'})
+mdb.jobs['job_bending_LE_10_mesh_size']._Message(COMPLETED, {
+    'message': 'Analysis phase complete', 'phase': BATCHPRE_PHASE, 
+    'jobName': 'job_bending_LE_10_mesh_size'})
+mdb.jobs['job_bending_LE_10_mesh_size']._Message(STARTED, {
+    'phase': STANDARD_PHASE, 'jobName': 'job_bending_LE_10_mesh_size', 
+    'clientHost': 'LAPTOP-V6H9F780', 'handle': 8224})
+mdb.jobs['job_bending_LE_10_mesh_size']._Message(STEP, {'stepId': 1, 
+    'phase': STANDARD_PHASE, 'jobName': 'job_bending_LE_10_mesh_size'})
+mdb.jobs['job_bending_LE_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_LE_10_mesh_size'})
+mdb.jobs['job_bending_LE_10_mesh_size']._Message(WARNING, {
+    'message': 'The 3-direction at one or more points in one or more layers in 6400 elements as defined in *ORIENTATION are in the opposite direction to the element normals. Either the 1 or 2 and the 3-direction defined in *ORIENTATION will be reversed. The elements have been identified in element set WarnElem3DirOppElemNormalStep1Inc1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'job_bending_LE_10_mesh_size'})
+mdb.jobs['job_bending_LE_10_mesh_size']._Message(WARNING, {
+    'message': 'The local-3 direction (after additional rotation and permutation) of the material orientation , specified via *ORIENTATION, is in the plane of the SHELL, MEMBRANE, GASKET, COHESIVE, or SURFACE element. The local-1 direction will be projected onto the element surface and the positive element normal will be used as the local-3 direction. The elements have been identified in element set WarnElemUserNormMatOrient.', 
+    'phase': STANDARD_PHASE, 'jobName': 'job_bending_LE_10_mesh_size'})
+mdb.jobs['job_bending_LE_10_mesh_size']._Message(MEMORY_ESTIMATE, {
+    'memory': 316.0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_LE_10_mesh_size'})
+mdb.jobs['job_bending_LE_10_mesh_size']._Message(PHYSICAL_MEMORY, {
+    'physical_memory': 16150.0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_LE_10_mesh_size'})
+mdb.jobs['job_bending_LE_10_mesh_size']._Message(MINIMUM_MEMORY, {
+    'minimum_memory': 48.0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_LE_10_mesh_size'})
+mdb.jobs['job_bending_LE_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 1, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_LE_10_mesh_size'})
+mdb.jobs['job_bending_LE_10_mesh_size']._Message(STATUS, {'step': 1, 
+    'increment': 1, 'attempts': 1, 'severe': 0, 'equilibrium': 1, 
+    'iterations': 1, 'totalTime': 0.0, 'stepTime': 2.22e-16, 
+    'timeIncrement': 2.22e-16, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_LE_10_mesh_size'})
+mdb.jobs['job_bending_LE_10_mesh_size']._Message(END_STEP, {'stepId': 1, 
+    'phase': STANDARD_PHASE, 'jobName': 'job_bending_LE_10_mesh_size'})
+mdb.jobs['job_bending_LE_10_mesh_size']._Message(COMPLETED, {
+    'message': 'Analysis phase complete', 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_LE_10_mesh_size'})
+mdb.jobs['job_bending_LE_10_mesh_size']._Message(JOB_COMPLETED, {
+    'time': 'Wed Nov 13 11:28:05 2024', 
+    'jobName': 'job_bending_LE_10_mesh_size'})
+mdb.models['bending'].rootAssembly.features['RP-1'].setValues(xValue=-200.0)
+mdb.models['bending'].rootAssembly.regenerate()
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='bending', modelPrint=OFF, 
+    multiprocessingMode=DEFAULT, name='job_bending_RS_10_mesh_size', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, numThreadsPerMpiProcess=
+    1, queue=None, resultsFormat=ODB, scratch='', type=ANALYSIS, 
+    userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['job_bending_RS_10_mesh_size'].submit(consistencyChecking=OFF)
+mdb.jobs['job_bending_RS_10_mesh_size']._Message(STARTED, {
+    'phase': BATCHPRE_PHASE, 'jobName': 'job_bending_RS_10_mesh_size', 
+    'clientHost': 'LAPTOP-V6H9F780', 'handle': 0})
+mdb.jobs['job_bending_RS_10_mesh_size']._Message(WARNING, {
+    'message': 'STRAIN OUTPUT REQUEST LE IS NOT VALID FOR SOME ELEMENTS IN THIS ANALYSIS. THIS REQUEST IS SWITCHED TO THE STRAIN MEASURE, E.', 
+    'phase': BATCHPRE_PHASE, 'jobName': 'job_bending_RS_10_mesh_size'})
+mdb.jobs['job_bending_RS_10_mesh_size']._Message(WARNING, {
+    'message': 'THE BEAM MPC HAS A ZERO LENGTH BETWEEN NODES 1307 INSTANCE PART-1-1 AND 1 (ASSEMBLY).  IT WILL BE REPLACED WITH A TIE MPC', 
+    'phase': BATCHPRE_PHASE, 'jobName': 'job_bending_RS_10_mesh_size'})
+mdb.jobs['job_bending_RS_10_mesh_size']._Message(ODB_FILE, {
+    'file': 'C:\\temp\\job_bending_RS_10_mesh_size.odb', 
+    'phase': BATCHPRE_PHASE, 'jobName': 'job_bending_RS_10_mesh_size'})
+mdb.jobs['job_bending_RS_10_mesh_size']._Message(COMPLETED, {
+    'message': 'Analysis phase complete', 'phase': BATCHPRE_PHASE, 
+    'jobName': 'job_bending_RS_10_mesh_size'})
+mdb.jobs['job_bending_RS_10_mesh_size']._Message(STARTED, {
+    'phase': STANDARD_PHASE, 'jobName': 'job_bending_RS_10_mesh_size', 
+    'clientHost': 'LAPTOP-V6H9F780', 'handle': 17072})
+mdb.jobs['job_bending_RS_10_mesh_size']._Message(STEP, {'stepId': 1, 
+    'phase': STANDARD_PHASE, 'jobName': 'job_bending_RS_10_mesh_size'})
+mdb.jobs['job_bending_RS_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_RS_10_mesh_size'})
+mdb.jobs['job_bending_RS_10_mesh_size']._Message(WARNING, {
+    'message': 'The 3-direction at one or more points in one or more layers in 6400 elements as defined in *ORIENTATION are in the opposite direction to the element normals. Either the 1 or 2 and the 3-direction defined in *ORIENTATION will be reversed. The elements have been identified in element set WarnElem3DirOppElemNormalStep1Inc1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'job_bending_RS_10_mesh_size'})
+mdb.jobs['job_bending_RS_10_mesh_size']._Message(WARNING, {
+    'message': 'The local-3 direction (after additional rotation and permutation) of the material orientation , specified via *ORIENTATION, is in the plane of the SHELL, MEMBRANE, GASKET, COHESIVE, or SURFACE element. The local-1 direction will be projected onto the element surface and the positive element normal will be used as the local-3 direction. The elements have been identified in element set WarnElemUserNormMatOrient.', 
+    'phase': STANDARD_PHASE, 'jobName': 'job_bending_RS_10_mesh_size'})
+mdb.jobs['job_bending_RS_10_mesh_size']._Message(MEMORY_ESTIMATE, {
+    'memory': 316.0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_RS_10_mesh_size'})
+mdb.jobs['job_bending_RS_10_mesh_size']._Message(PHYSICAL_MEMORY, {
+    'physical_memory': 16150.0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_RS_10_mesh_size'})
+mdb.jobs['job_bending_RS_10_mesh_size']._Message(MINIMUM_MEMORY, {
+    'minimum_memory': 48.0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_RS_10_mesh_size'})
+mdb.jobs['job_bending_RS_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 1, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_RS_10_mesh_size'})
+mdb.jobs['job_bending_RS_10_mesh_size']._Message(STATUS, {'step': 1, 
+    'increment': 1, 'attempts': 1, 'severe': 0, 'equilibrium': 1, 
+    'iterations': 1, 'totalTime': 0.0, 'stepTime': 2.22e-16, 
+    'timeIncrement': 2.22e-16, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_RS_10_mesh_size'})
+mdb.jobs['job_bending_RS_10_mesh_size']._Message(END_STEP, {'stepId': 1, 
+    'phase': STANDARD_PHASE, 'jobName': 'job_bending_RS_10_mesh_size'})
+mdb.jobs['job_bending_RS_10_mesh_size']._Message(COMPLETED, {
+    'message': 'Analysis phase complete', 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_RS_10_mesh_size'})
+mdb.jobs['job_bending_RS_10_mesh_size']._Message(JOB_COMPLETED, {
+    'time': 'Wed Nov 13 11:30:23 2024', 
+    'jobName': 'job_bending_RS_10_mesh_size'})
+mdb.models['bending'].rootAssembly.deleteMesh(regions=(
+    mdb.models['bending'].rootAssembly.instances['Part-1-1'], ))
+mdb.models['bending'].rootAssembly.seedPartInstance(deviationFactor=0.1, 
+    minSizeFactor=0.1, regions=(
+    mdb.models['bending'].rootAssembly.instances['Part-1-1'], ), size=5.0)
+mdb.models['bending'].rootAssembly.generateMesh(regions=(
+    mdb.models['bending'].rootAssembly.instances['Part-1-1'], ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='bending', modelPrint=OFF, 
+    multiprocessingMode=DEFAULT, name='job_bending_RS_5_mesh_size', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, numThreadsPerMpiProcess=
+    1, queue=None, resultsFormat=ODB, scratch='', type=ANALYSIS, 
+    userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['job_bending_RS_5_mesh_size'].submit(consistencyChecking=OFF)
+mdb.jobs['job_bending_RS_5_mesh_size']._Message(STARTED, {
+    'phase': BATCHPRE_PHASE, 'jobName': 'job_bending_RS_5_mesh_size', 
+    'clientHost': 'LAPTOP-V6H9F780', 'handle': 0})
+mdb.jobs['job_bending_RS_5_mesh_size']._Message(WARNING, {
+    'message': 'STRAIN OUTPUT REQUEST LE IS NOT VALID FOR SOME ELEMENTS IN THIS ANALYSIS. THIS REQUEST IS SWITCHED TO THE STRAIN MEASURE, E.', 
+    'phase': BATCHPRE_PHASE, 'jobName': 'job_bending_RS_5_mesh_size'})
+mdb.jobs['job_bending_RS_5_mesh_size']._Message(WARNING, {
+    'message': 'THE BEAM MPC HAS A ZERO LENGTH BETWEEN NODES 2623 INSTANCE PART-1-1 AND 1 (ASSEMBLY).  IT WILL BE REPLACED WITH A TIE MPC', 
+    'phase': BATCHPRE_PHASE, 'jobName': 'job_bending_RS_5_mesh_size'})
+mdb.jobs['job_bending_RS_5_mesh_size']._Message(ODB_FILE, {
+    'file': 'C:\\temp\\job_bending_RS_5_mesh_size.odb', 
+    'phase': BATCHPRE_PHASE, 'jobName': 'job_bending_RS_5_mesh_size'})
+mdb.jobs['job_bending_RS_5_mesh_size']._Message(COMPLETED, {
+    'message': 'Analysis phase complete', 'phase': BATCHPRE_PHASE, 
+    'jobName': 'job_bending_RS_5_mesh_size'})
+mdb.jobs['job_bending_RS_5_mesh_size']._Message(STARTED, {
+    'phase': STANDARD_PHASE, 'jobName': 'job_bending_RS_5_mesh_size', 
+    'clientHost': 'LAPTOP-V6H9F780', 'handle': 1896})
+mdb.jobs['job_bending_RS_5_mesh_size']._Message(STEP, {'stepId': 1, 
+    'phase': STANDARD_PHASE, 'jobName': 'job_bending_RS_5_mesh_size'})
+mdb.jobs['job_bending_RS_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_RS_5_mesh_size'})
+mdb.jobs['job_bending_RS_5_mesh_size']._Message(WARNING, {
+    'message': 'The 3-direction at one or more points in one or more layers in 25600 elements as defined in *ORIENTATION are in the opposite direction to the element normals. Either the 1 or 2 and the 3-direction defined in *ORIENTATION will be reversed. The elements have been identified in element set WarnElem3DirOppElemNormalStep1Inc1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'job_bending_RS_5_mesh_size'})
+mdb.jobs['job_bending_RS_5_mesh_size']._Message(WARNING, {
+    'message': 'The local-3 direction (after additional rotation and permutation) of the material orientation , specified via *ORIENTATION, is in the plane of the SHELL, MEMBRANE, GASKET, COHESIVE, or SURFACE element. The local-1 direction will be projected onto the element surface and the positive element normal will be used as the local-3 direction. The elements have been identified in element set WarnElemUserNormMatOrient.', 
+    'phase': STANDARD_PHASE, 'jobName': 'job_bending_RS_5_mesh_size'})
+mdb.jobs['job_bending_RS_5_mesh_size']._Message(MEMORY_ESTIMATE, {
+    'memory': 1335.0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_RS_5_mesh_size'})
+mdb.jobs['job_bending_RS_5_mesh_size']._Message(PHYSICAL_MEMORY, {
+    'physical_memory': 16150.0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_RS_5_mesh_size'})
+mdb.jobs['job_bending_RS_5_mesh_size']._Message(MINIMUM_MEMORY, {
+    'minimum_memory': 177.0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_RS_5_mesh_size'})
+mdb.jobs['job_bending_RS_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 1, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_RS_5_mesh_size'})
+mdb.jobs['job_bending_RS_5_mesh_size']._Message(STATUS, {'step': 1, 
+    'increment': 1, 'attempts': 1, 'severe': 0, 'equilibrium': 1, 
+    'iterations': 1, 'totalTime': 0.0, 'stepTime': 2.22e-16, 
+    'timeIncrement': 2.22e-16, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_RS_5_mesh_size'})
+mdb.jobs['job_bending_RS_5_mesh_size']._Message(END_STEP, {'stepId': 1, 
+    'phase': STANDARD_PHASE, 'jobName': 'job_bending_RS_5_mesh_size'})
+mdb.jobs['job_bending_RS_5_mesh_size']._Message(COMPLETED, {
+    'message': 'Analysis phase complete', 'phase': STANDARD_PHASE, 
+    'jobName': 'job_bending_RS_5_mesh_size'})
+mdb.jobs['job_bending_RS_5_mesh_size']._Message(JOB_COMPLETED, {
+    'time': 'Wed Nov 13 11:33:01 2024', 
+    'jobName': 'job_bending_RS_5_mesh_size'})
+mdb.Model(name='buckling', objectToCopy=mdb.models['bending'])
+mdb.models['bending'].parts['Part-1'].features['Shell extrude-1'].setValues(
+    depth=4000.0)
+mdb.models['bending'].parts['Part-1'].regenerate()
+mdb.models['bending'].parts['Part-1'].features['Shell extrude-1'].setValues(
+    depth=2000.0)
+mdb.models['bending'].parts['Part-1'].regenerate()
+# Save by User on 2024_11_13-11.39.49; build 2024 2023_09_21-13.55.25 RELr426 190762
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['bending'].parts['Part-1'].features['Shell extrude-1'].setValues(
+    depth=4000.0)
+mdb.models['bending'].parts['Part-1'].regenerate()
+mdb.models['bending'].parts['Part-1'].features['Shell extrude-1'].setValues(
+    depth=2000.0)
+mdb.models['bending'].parts['Part-1'].regenerate()
+# Save by User on 2024_11_13-11.40.27; build 2024 2023_09_21-13.55.25 RELr426 190762
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['buckling'].parts['Part-1'].features['Shell extrude-1'].setValues(
+    depth=4000.0)
+mdb.models['buckling'].parts['Part-1'].regenerate()
+mdb.models['buckling'].rootAssembly.regenerate()
+mdb.models['buckling'].rootAssembly.regenerate()
+mdb.models['buckling'].rootAssembly.deleteMesh(regions=(
+    mdb.models['buckling'].rootAssembly.instances['Part-1-1'], ))
+mdb.models['buckling'].rootAssembly.seedPartInstance(deviationFactor=0.1, 
+    minSizeFactor=0.1, regions=(
+    mdb.models['buckling'].rootAssembly.instances['Part-1-1'], ), size=10.0)
+mdb.models['buckling'].rootAssembly.generateMesh(regions=(
+    mdb.models['buckling'].rootAssembly.instances['Part-1-1'], ))
+mdb.models['buckling'].rootAssembly.features['RP-1'].setValues(xValue=-57.4503, 
+    zValue=4000.0)
+mdb.models['buckling'].rootAssembly.regenerate()
+# Save by User on 2024_11_13-11.43.58; build 2024 2023_09_21-13.55.25 RELr426 190762
+# Save by User on 2024_11_13-11.44.02; build 2024 2023_09_21-13.55.25 RELr426 190762
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['buckling'].BuckleStep(blockSize=DEFAULT, eigensolver=LANCZOS, 
+    maintainAttributes=True, maxBlocks=DEFAULT, minEigen=None, name='Step-1', 
+    numEigen=100, previous='Initial')
+mdb.models['buckling'].loads['Load-1'].setValues(cf2=0.0, cf3=-1.0, 
+    distributionType=UNIFORM, field='')
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='buckling', modelPrint=OFF, 
+    multiprocessingMode=DEFAULT, name='job_buckling_10_mesh_size', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, numThreadsPerMpiProcess=
+    1, queue=None, resultsFormat=ODB, scratch='', type=ANALYSIS, 
+    userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['job_buckling_10_mesh_size'].submit(consistencyChecking=OFF)
+mdb.jobs['job_buckling_10_mesh_size']._Message(STARTED, {
+    'phase': BATCHPRE_PHASE, 'jobName': 'job_buckling_10_mesh_size', 
+    'clientHost': 'LAPTOP-V6H9F780', 'handle': 0})
+mdb.jobs['job_buckling_10_mesh_size']._Message(WARNING, {
+    'message': 'OUTPUT REQUEST CF IS NOT AVAILABLE FOR THIS TYPE OF ANALYSIS', 
+    'phase': BATCHPRE_PHASE, 'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(WARNING, {
+    'message': 'STRAIN OUTPUT REQUEST LE IS NOT VALID FOR SOME ELEMENTS IN THIS ANALYSIS. THIS REQUEST IS SWITCHED TO THE STRAIN MEASURE, E.', 
+    'phase': BATCHPRE_PHASE, 'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FILE, {
+    'file': 'C:\\temp\\job_buckling_10_mesh_size.odb', 'phase': BATCHPRE_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(COMPLETED, {
+    'message': 'Analysis phase complete', 'phase': BATCHPRE_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(STARTED, {
+    'phase': STANDARD_PHASE, 'jobName': 'job_buckling_10_mesh_size', 
+    'clientHost': 'LAPTOP-V6H9F780', 'handle': 6764})
+mdb.jobs['job_buckling_10_mesh_size']._Message(STEP, {'stepId': 1, 
+    'phase': STANDARD_PHASE, 'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(WARNING, {
+    'message': 'The 3-direction at one or more points in one or more layers in 12800 elements as defined in *ORIENTATION are in the opposite direction to the element normals. Either the 1 or 2 and the 3-direction defined in *ORIENTATION will be reversed. The elements have been identified in element set WarnElem3DirOppElemNormalStep1Inc1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(WARNING, {
+    'message': 'The local-3 direction (after additional rotation and permutation) of the material orientation , specified via *ORIENTATION, is in the plane of the SHELL, MEMBRANE, GASKET, COHESIVE, or SURFACE element. The local-1 direction will be projected onto the element surface and the positive element normal will be used as the local-3 direction. The elements have been identified in element set WarnElemUserNormMatOrient.', 
+    'phase': STANDARD_PHASE, 'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(MEMORY_ESTIMATE, {
+    'memory': 1731.0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(PHYSICAL_MEMORY, {
+    'physical_memory': 16150.0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(MINIMUM_MEMORY, {
+    'minimum_memory': 134.0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(WARNING, {
+    'message': 'THERE MAY BE MORE EIGENVALUES IN THE SPECIFIED RANGE THAN REQUESTED. IF THE NUMBER OF EIGENVALUES WAS NOT EXPLICITLY REQUESTED, SPECIFY THE MAXIMUM NUMBER OF EIGENVALUES TO BE EXTRACTED', 
+    'phase': STANDARD_PHASE, 'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 1, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 2, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 3, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 4, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 5, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 6, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 7, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 8, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 9, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 10, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 11, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 12, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 13, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 14, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 15, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 16, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 17, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 18, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 19, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 20, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 21, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 22, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 23, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 24, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 25, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 26, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 27, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 28, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 29, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 30, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 31, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 32, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 33, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 34, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 35, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 36, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 37, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 38, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 39, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 40, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 41, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 42, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 43, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 44, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 45, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 46, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 47, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 48, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 49, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 50, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 51, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 52, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 53, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 54, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 55, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 56, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 57, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 58, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 59, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 60, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 61, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 62, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 63, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 64, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 65, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 66, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 67, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 68, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 69, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 70, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 71, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 72, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 73, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 74, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 75, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 76, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 77, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 78, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 79, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 80, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 81, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 82, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 83, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 84, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 85, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 86, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 87, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 88, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 89, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 90, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 91, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 92, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 93, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 94, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 95, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 96, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 97, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 98, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 99, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 100, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(STATUS, {'step': 1, 
+    'increment': 1, 'attempts': 1, 'severe': 0, 'equilibrium': 0, 
+    'iterations': 0, 'totalTime': 0.0, 'stepTime': 1e-36, 
+    'timeIncrement': 1e-36, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(END_STEP, {'stepId': 1, 
+    'phase': STANDARD_PHASE, 'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(COMPLETED, {
+    'message': 'Analysis phase complete', 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.jobs['job_buckling_10_mesh_size']._Message(JOB_COMPLETED, {
+    'time': 'Wed Nov 13 11:49:23 2024', 
+    'jobName': 'job_buckling_10_mesh_size'})
+mdb.models['buckling'].rootAssembly.deleteMesh(regions=(
+    mdb.models['buckling'].rootAssembly.instances['Part-1-1'], ))
+mdb.models['buckling'].rootAssembly.seedPartInstance(deviationFactor=0.1, 
+    minSizeFactor=0.1, regions=(
+    mdb.models['buckling'].rootAssembly.instances['Part-1-1'], ), size=5.0)
+mdb.models['buckling'].rootAssembly.generateMesh(regions=(
+    mdb.models['buckling'].rootAssembly.instances['Part-1-1'], ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='buckling', modelPrint=OFF, 
+    multiprocessingMode=DEFAULT, name='job_buckling_5_mesh_size', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, numThreadsPerMpiProcess=
+    1, queue=None, resultsFormat=ODB, scratch='', type=ANALYSIS, 
+    userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['job_buckling_5_mesh_size'].submit(consistencyChecking=OFF)
+mdb.jobs['job_buckling_5_mesh_size']._Message(STARTED, {
+    'phase': BATCHPRE_PHASE, 'jobName': 'job_buckling_5_mesh_size', 
+    'clientHost': 'LAPTOP-V6H9F780', 'handle': 0})
+mdb.jobs['job_buckling_5_mesh_size']._Message(WARNING, {
+    'message': 'OUTPUT REQUEST CF IS NOT AVAILABLE FOR THIS TYPE OF ANALYSIS', 
+    'phase': BATCHPRE_PHASE, 'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(WARNING, {
+    'message': 'STRAIN OUTPUT REQUEST LE IS NOT VALID FOR SOME ELEMENTS IN THIS ANALYSIS. THIS REQUEST IS SWITCHED TO THE STRAIN MEASURE, E.', 
+    'phase': BATCHPRE_PHASE, 'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FILE, {
+    'file': 'C:\\temp\\job_buckling_5_mesh_size.odb', 'phase': BATCHPRE_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(COMPLETED, {
+    'message': 'Analysis phase complete', 'phase': BATCHPRE_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(STARTED, {
+    'phase': STANDARD_PHASE, 'jobName': 'job_buckling_5_mesh_size', 
+    'clientHost': 'LAPTOP-V6H9F780', 'handle': 21308})
+mdb.jobs['job_buckling_5_mesh_size']._Message(STEP, {'stepId': 1, 
+    'phase': STANDARD_PHASE, 'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(WARNING, {
+    'message': 'The 3-direction at one or more points in one or more layers in 51200 elements as defined in *ORIENTATION are in the opposite direction to the element normals. Either the 1 or 2 and the 3-direction defined in *ORIENTATION will be reversed. The elements have been identified in element set WarnElem3DirOppElemNormalStep1Inc1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(WARNING, {
+    'message': 'The local-3 direction (after additional rotation and permutation) of the material orientation , specified via *ORIENTATION, is in the plane of the SHELL, MEMBRANE, GASKET, COHESIVE, or SURFACE element. The local-1 direction will be projected onto the element surface and the positive element normal will be used as the local-3 direction. The elements have been identified in element set WarnElemUserNormMatOrient.', 
+    'phase': STANDARD_PHASE, 'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(MEMORY_ESTIMATE, {
+    'memory': 7170.0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(PHYSICAL_MEMORY, {
+    'physical_memory': 16150.0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(MINIMUM_MEMORY, {
+    'minimum_memory': 527.0, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(WARNING, {
+    'message': 'THERE MAY BE MORE EIGENVALUES IN THE SPECIFIED RANGE THAN REQUESTED. IF THE NUMBER OF EIGENVALUES WAS NOT EXPLICITLY REQUESTED, SPECIFY THE MAXIMUM NUMBER OF EIGENVALUES TO BE EXTRACTED', 
+    'phase': STANDARD_PHASE, 'jobName': 'job_buckling_5_mesh_size'})
+del mdb.jobs['job_buckling_5_mesh_size']
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='buckling', modelPrint=OFF, 
+    multiprocessingMode=DEFAULT, name='job_buckling_5_mesh_size', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, numThreadsPerMpiProcess=
+    1, queue=None, resultsFormat=ODB, scratch='', type=ANALYSIS, 
+    userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['job_buckling_5_mesh_size'].submit(consistencyChecking=OFF)
+# Save by User on 2024_11_13-12.05.33; build 2024 2023_09_21-13.55.25 RELr426 190762
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 1, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 1, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 2, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 2, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 3, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 3, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 4, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 4, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 5, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 5, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 6, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 6, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 7, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 7, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 8, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 8, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 9, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 9, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 10, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 10, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 11, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 11, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 12, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 12, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 13, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 13, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 14, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 14, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 15, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 15, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 16, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 16, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 17, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 17, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 18, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 18, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 19, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 19, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 20, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 20, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 21, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 21, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 22, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 22, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 23, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 23, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 24, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 24, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 25, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 25, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 26, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 26, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 27, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 27, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 28, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 28, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 29, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 29, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 30, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 30, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 31, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 31, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 32, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 32, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 33, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 33, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 34, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 34, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 35, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 35, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 36, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 36, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 37, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 37, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 38, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 38, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 39, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 39, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 40, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 40, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 41, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 41, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 42, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 42, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 43, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 43, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 44, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 44, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 45, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 45, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 46, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 46, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 47, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 47, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 48, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 48, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 49, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 49, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 50, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 50, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 51, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 51, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 52, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 52, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 53, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 53, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 54, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 54, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 55, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 55, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 56, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 56, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 57, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 57, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 58, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 58, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 59, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 59, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 60, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 60, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 61, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 61, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 62, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 62, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 63, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 63, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 64, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 64, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 65, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 65, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 66, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 66, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 67, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 67, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 68, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 68, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 69, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 69, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 70, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 70, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 71, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 71, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 72, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 72, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 73, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 73, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 74, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 74, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 75, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 75, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 76, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 76, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 77, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 77, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 78, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 78, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 79, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 79, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 80, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 80, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 81, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 81, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 82, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 82, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 83, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 83, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 84, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 84, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 85, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 85, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 86, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 86, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 87, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 87, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 88, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 88, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 89, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 89, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 90, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 90, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 91, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 91, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 92, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 92, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 93, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 93, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 94, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 94, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 95, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 95, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 96, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 96, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 97, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 97, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 98, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 98, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 99, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 99, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 100, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 100, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(STATUS, {'step': 1, 
+    'increment': 1, 'attempts': 1, 'severe': 0, 'equilibrium': 0, 
+    'iterations': 0, 'totalTime': 0.0, 'stepTime': 1e-36, 
+    'timeIncrement': 1e-36, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(STATUS, {'step': 1, 
+    'increment': 1, 'attempts': 1, 'severe': 0, 'equilibrium': 0, 
+    'iterations': 0, 'totalTime': 0.0, 'stepTime': 1e-36, 
+    'timeIncrement': 1e-36, 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(END_STEP, {'stepId': 1, 
+    'phase': STANDARD_PHASE, 'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(END_STEP, {'stepId': 1, 
+    'phase': STANDARD_PHASE, 'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(COMPLETED, {
+    'message': 'Analysis phase complete', 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(COMPLETED, {
+    'message': 'Analysis phase complete', 'phase': STANDARD_PHASE, 
+    'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(JOB_COMPLETED, {
+    'time': 'Wed Nov 13 12:06:05 2024', 'jobName': 'job_buckling_5_mesh_size'})
+mdb.jobs['job_buckling_5_mesh_size']._Message(JOB_COMPLETED, {
+    'time': 'Wed Nov 13 12:06:05 2024', 'jobName': 'job_buckling_5_mesh_size'})
+# Save by User on 2024_11_13-12.07.23; build 2024 2023_09_21-13.55.25 RELr426 190762
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['bending'].rootAssembly.regenerate()
+mdb.models['bending'].rootAssembly.regenerate()
+# Save by User on 2024_11_13-12.12.51; build 2024 2023_09_21-13.55.25 RELr426 190762
